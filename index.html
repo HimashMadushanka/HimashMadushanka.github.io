@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Himash Madushanka - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -152,6 +153,7 @@
         .cta-buttons {
             display: flex;
             gap: 1.5rem;
+            margin-bottom: 3rem;
         }
 
         .btn {
@@ -187,6 +189,33 @@
             background: #00d9ff;
             color: #0a0e27;
             transform: translateY(-3px);
+        }
+
+        .hero-social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .hero-social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #1a1f3a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            text-decoration: none;
+            color: #ffffff;
+            transition: all 0.3s;
+            border: 2px solid #0099cc;
+        }
+
+        .hero-social-link:hover {
+            background: #00d9ff;
+            color: #0a0e27;
+            transform: translateY(-5px);
+            border-color: #00d9ff;
         }
 
         /* Animated Background */
@@ -324,7 +353,7 @@
         }
 
         .skill-item:hover {
-            transform: translateY(-10px) rotateY(5deg);
+            transform: translateY(-10px);
             border-color: #00d9ff;
             background: #252d4a;
         }
@@ -375,18 +404,6 @@
             font-size: 1.8rem;
             font-weight: bold;
             color: #00d9ff;
-        }
-
-        .skill-level {
-            display: none;
-        }
-
-        .skill-progress {
-            display: none;
-        }
-
-        .skill-percentage {
-            display: none;
         }
 
         /* Projects Section */
@@ -506,11 +523,19 @@
             margin-bottom: 3rem;
         }
 
+        .contact-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
         .social-links {
             display: flex;
             justify-content: center;
             gap: 2rem;
             margin-top: 3rem;
+            flex-wrap: wrap;
         }
 
         .social-link {
@@ -622,6 +647,10 @@
             .cta-buttons {
                 flex-direction: column;
             }
+
+            .hero-social-links {
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -651,11 +680,28 @@
             <div class="circle"></div>
         </div>
         <div class="hero-content">
-            <h1>Hi, I'm <span>Himash</span><br>Data Science Student</h1>
+            <h1>Hi, I'm Himash Madushanka - Data Science Student</h1>
             <p>Transforming data into insights and building intelligent solutions for tomorrow's challenges.</p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
                 <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+            </div>
+            <div class="hero-social-links">
+                <a href="https://www.linkedin.com/in/himash-madushanka" class="hero-social-link" title="LinkedIn" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/HimashMadushanka" class="hero-social-link" title="GitHub" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/himash_madushanka" class="hero-social-link" title="Instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/himash.madushanka" class="hero-social-link" title="Facebook" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com/HimashMadushanka" class="hero-social-link" title="Twitter" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
             </div>
         </div>
         <div class="hero-image">
@@ -851,15 +897,29 @@
         <h2 class="section-title">Get In <span>Touch</span></h2>
         <div class="contact-content">
             <p class="contact-text">I'm always interested in hearing about new opportunities, collaborations, or just having a chat about technology and data science.</p>
-            <div class="cta-buttons">
+            <div class="contact-buttons">
                 <a href="mailto:himash@example.com" class="btn btn-primary">Email Me</a>
                 <a href="https://github.com/HimashMadushanka" class="btn btn-secondary" target="_blank">GitHub Profile</a>
             </div>
             <div class="social-links">
-                <a href="#" class="social-link">💼</a>
-                <a href="https://github.com/HimashMadushanka" class="social-link" target="_blank">💻</a>
-                <a href="#" class="social-link">📧</a>
-                <a href="#" class="social-link">🐦</a>
+                <a href="https://www.linkedin.com/in/himash-madushanka" class="social-link" title="LinkedIn" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/HimashMadushanka" class="social-link" title="GitHub" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/himash_madushanka" class="social-link" title="Instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/himash.madushanka" class="social-link" title="Facebook" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com/HimashMadushanka" class="social-link" title="Twitter" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:himash@example.com" class="social-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
         </div>
     </section>
