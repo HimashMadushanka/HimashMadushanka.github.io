@@ -111,6 +111,7 @@
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
+            object-position: center 40%;
             border: 5px solid #0a0e27;
         }
 
