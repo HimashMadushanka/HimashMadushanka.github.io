@@ -1,0 +1,74 @@
+[
+  {
+    "title": "AgriMind-AI-Agents (Ongoing)",
+    "description": "Developing an AI system to understand Sinhala-language farmer queries, identify agricultural problems, and provide relevant guidance and recommendations using the Gemini API and AI agents.",
+    "tags": ["Python", "NLP", "Machine Learning", "Gemini API", "AI Agents"],
+    "url": "https://github.com/HimashMadushanka/AgriMind-AI-Agents"
+  },
+  {
+    "title": "Mobile Review Sentiment Analysis",
+    "description": "Developed an NLP application to classify mobile reviews as positive, neutral, or negative. An integrated FastAPI backend, Streamlit dashboard, and Chrome extension provide sentiment predictions for customer feedback analysis.",
+    "tags": ["Python", "PyTorch", "BERT", "TF-IDF", "FastAPI", "Streamlit"],
+    "url": "https://github.com/HimashMadushanka/Mobile-Review-Sentiment-Analysis"
+  },
+  {
+    "title": "AI-Powered Loan Default Prediction",
+    "description": "Developed an end-to-end XGBoost system to predict loan default risk and explain predictions with SHAP. FastAPI and Streamlit deliver interactive risk assessments with database integration, data encryption, and fairness checks.",
+    "tags": ["Python", "Scikit-learn", "XGBoost", "SHAP", "FastAPI", "Streamlit"],
+    "url": "https://github.com/HimashMadushanka/Ai-loan-default-prediction"
+  },
+  {
+    "title": "Sri Lanka Cost of Living & Inflation Analysis Dashboard",
+    "description": "Analyzed 50,000+ retail-price observations across Sri Lanka to compare product prices and cost-of-living patterns by category and location. Created visualizations and DAX measures to identify price patterns and communicate insights.",
+    "tags": ["Power BI", "Power Query", "DAX"],
+    "url": "https://github.com/HimashMadushanka/Sri-Lanka-Cost-of-Living-Analysis-Dashboard"
+  },
+  {
+    "title": "Sri Lanka Tourism Intelligence",
+    "description": "Analyzed Sri Lanka tourism data from 2018–2025 to identify trends, seasonal patterns, crisis impacts, and tourist arrival recovery. Developed an interactive dashboard, forecasting models, and automated data updates with GitHub Actions.",
+    "tags": ["Python", "Pandas", "NumPy", "Streamlit", "Plotly", "GitHub Actions"],
+    "url": "https://github.com/HimashMadushanka/Sri-Lanka-Tourism-Intelligence"
+  },
+  {
+    "title": "Lab Booking System",
+    "description": "A PHP and MySQL web application for lab reservations, booking history, and administrator management of lab resources and reports.",
+    "tags": ["PHP", "MySQL", "HTML", "CSS"],
+    "url": "https://github.com/HimashMadushanka/Lab-Booking-System"
+  },
+  {
+    "title": "AI-Based Business Analyzer",
+    "description": "An AI-based business analysis project designed to help examine business information and surface useful insights for decision-making.",
+    "tags": ["Python", "Pandas", "NumPy", "Streamlit", "Plotly"],
+    "url": "https://github.com/HimashMadushanka/AI_Based_Business_Analyzer"
+  },
+  {
+    "title": "Supply Chain Performance Analytics Dashboard",
+    "description": "An interactive Power BI dashboard analyzing over 180,000 orders across 164 countries, with sales, profitability, regional, shipping, and delivery performance insights.",
+    "tags": ["Power BI", "Python", "DAX", "Power Query"],
+    "url": "https://github.com/HimashMadushanka/Supply-Chain-Performance-Power-BI-Analytics-Dashboard"
+  },
+  {
+    "title": "ShopEasy",
+    "description": "An e-commerce project focused on the online shopping experience, bringing product discovery and purchasing into one application.",
+    "tags": ["Python", "Flask", "HTML", "CSS", "JavaScript", "SQL"],
+    "url": "https://github.com/HimashMadushanka/ShopEasy"
+  },
+  {
+    "title": "Sales Data Analytics",
+    "description": "A sales data analysis project focused on exploring transaction data, identifying performance patterns, and presenting findings that support business decisions.",
+    "tags": ["Python", "Pandas", "NumPy", "Streamlit"],
+    "url": "https://github.com/HimashMadushanka/Sales-Data-Analytics"
+  },
+  {
+    "title": "HealthTrack",
+    "description": "A health tracking project for organizing personal health information and making it easier to review health records over time.",
+    "tags": ["PHP", "SQL", "HTML", "CSS", "JavaScript", "Chart.js"],
+    "url": "https://github.com/HimashMadushanka/HealthTrack"
+  },
+  {
+    "title": "ScrapeX",
+    "description": "A web scraping project for collecting information from websites and preparing it for further use or analysis.",
+    "tags": ["Python", "Web Scraping", "Data Collection"],
+    "url": "https://github.com/HimashMadushanka/ScrapeX"
+  }
+]

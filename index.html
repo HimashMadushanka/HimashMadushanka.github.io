@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Himash Madushanka - Portfolio</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="style.css?v=9">
+
 </head>
 <body>
     <header>
@@ -17,14 +18,20 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#volunteering">Volunteering</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="hamburger" id="hamburger">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme"><i class="fas fa-sun" aria-hidden="true"></i></button>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-controls="navMenu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
     </header>
 
     <section class="hero" id="home">
@@ -34,35 +41,32 @@
             <div class="circle"></div>
         </div>
         <div class="hero-content">
-            <h1>Hi, I'm Himash Madushanka - Data Science Student</h1>
+            <h1>Hi, I'm<br><span class="hero-name">Himash Madushanka</span><br><span class="hero-role">Data Science Student</span></h1>
             <p>Transforming data into insights and building intelligent solutions for tomorrow's challenges.</p>
             <div class="cta-buttons">
                 <a href="https://github.com/HimashMadushanka?tab=repositories" class="btn btn-primary">View My Work</a>
-                <a href="mailto:himashmadushanka975@gmail.com" class="btn btn-secondary">Let's Talk</a>
+                <a href="#contact" class="btn btn-secondary">Let's Talk</a>
             </div>
             <div class="hero-social-links">
-                <a href="https://www.linkedin.com/in/himash-madushanka" class="hero-social-link" title="LinkedIn" target="_blank">
+                <a href="https://www.linkedin.com/in/himash-madushanka-758a4839b/" class="hero-social-link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/HimashMadushanka" class="hero-social-link" title="GitHub" target="_blank">
+                <a href="https://github.com/HimashMadushanka" class="hero-social-link" title="GitHub" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.instagram.com/madushankahimash?igsh=OGRudXNjM2NkNHZ3&utm_source=qr" class="hero-social-link" title="Instagram" target="_blank">
+                <a href="https://www.instagram.com/madushankahimash?igsh=OGRudXNjM2NkNHZ3&utm_source=qr" class="hero-social-link" title="Instagram" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="https://www.facebook.com/share/14LUfJgiMvK/?mibextid=wwXIfr" class="hero-social-link" title="Facebook" target="_blank">
+                <a href="https://www.facebook.com/share/14LUfJgiMvK/?mibextid=wwXIfr" class="hero-social-link" title="Facebook" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://twitter.com/HimashMadushanka" class="hero-social-link" title="Twitter" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="mailto:himashmadushanka975@gmail.com" class="hero-social-link" title="Email" target="_blank">
+                <a href="mailto:himashmadushanka975@gmail.com" class="hero-social-link" title="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
         </div>
         <div class="hero-image">
-            <img src="image/myimage.jpg" alt="Himash Madushanka">
+            <img src="image/optimized/myimage.jpg" alt="Himash Madushanka" width="900" height="1200" fetchpriority="high" decoding="async">
         </div>
     </section>
 
@@ -73,6 +77,7 @@
                 <p>I'm a passionate Data Science undergraduate at Sabaragamuwa University of Sri Lanka, dedicated to exploring the fascinating world of data analytics, machine learning, and artificial intelligence.</p>
                 <br>
                 <p>With a strong foundation in programming and statistical analysis, I transform complex data into meaningful insights that drive decision-making and innovation.</p>
+                <a class="btn btn-primary resume-download" href="K_Himash_Madushanka_Internship_Master_CV.pdf" download="K_Himash_Madushanka_Resume.pdf"><i class="fas fa-download" aria-hidden="true"></i> Download Resume</a>
             </div>
             <div class="about-stats">
                 <div class="stat-box">
@@ -80,7 +85,7 @@
                     <div class="stat-label">Projects Completed</div>
                 </div>
                 <div class="stat-box">
-                    <div class="stat-number">6+</div>
+                    <div class="stat-number">10+</div>
                     <div class="stat-label">Technologies</div>
                 </div>
                 <div class="stat-box">
@@ -96,308 +101,398 @@
     </section>
 
     <section class="skills" id="skills">
-        <h2 class="section-title">My <span>Skills</span></h2>
+        <h2 class="section-title">Technical <span>Skills</span></h2>
+        <p class="skills-intro">A practical toolkit for turning data into clear insights and data-driven solutions.</p>
         <div class="skills-grid">
-            <div class="skill-item" data-skill="90">
-                <div class="skill-icon">🐍</div>
-                <div class="circular-progress">
-                    <svg width="120" height="120">
-                        <defs>
-                            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#0099cc;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#00d9ff;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <circle class="progress-circle-bg" cx="60" cy="60" r="54"></circle>
-                        <circle class="progress-circle" cx="60" cy="60" r="54" style="stroke: url(#gradient1)"></circle>
-                    </svg>
-                    <div class="progress-text">0%</div>
-                </div>
-                <div class="skill-name">Python</div>
-            </div>
-            <div class="skill-item" data-skill="85">
-                <div class="skill-icon">🤖</div>
-                <div class="circular-progress">
-                    <svg width="120" height="120">
-                        <defs>
-                            <linearGradient id="gradient5" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#0099cc;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#00d9ff;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <circle class="progress-circle-bg" cx="60" cy="60" r="54"></circle>
-                        <circle class="progress-circle" cx="60" cy="60" r="54" style="stroke: url(#gradient5)"></circle>
-                    </svg>
-                    <div class="progress-text">0%</div>
-                </div>
-                <div class="skill-name">ML/AI</div>
-            </div>
-            <div class="skill-item" data-skill="92">
-                <div class="skill-icon">📊</div>
-                <div class="circular-progress">
-                    <svg width="120" height="120">
-                        <defs>
-                            <linearGradient id="gradient6" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#0099cc;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#00d9ff;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <circle class="progress-circle-bg" cx="60" cy="60" r="54"></circle>
-                        <circle class="progress-circle" cx="60" cy="60" r="54" style="stroke: url(#gradient6)"></circle>
-                    </svg>
-                    <div class="progress-text">0%</div>
-                </div>
-                <div class="skill-name">Data Analysis</div>
-            </div>
-             <div class="skill-item" data-skill="88">
-                <div class="skill-icon">🌐</div>
-                <div class="circular-progress">
-                    <svg width="120" height="120">
-                        <defs>
-                            <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#0099cc;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#00d9ff;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <circle class="progress-circle-bg" cx="60" cy="60" r="54"></circle>
-                        <circle class="progress-circle" cx="60" cy="60" r="54" style="stroke: url(#gradient4)"></circle>
-                    </svg>
-                    <div class="progress-text">0%</div>
-                </div>
-                <div class="skill-name">Web Dev</div>
-            </div>
-            <div class="skill-item" data-skill="85">
-                <div class="skill-icon">☕</div>
-                <div class="circular-progress">
-                    <svg width="120" height="120">
-                        <defs>
-                            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#0099cc;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#00d9ff;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <circle class="progress-circle-bg" cx="60" cy="60" r="54"></circle>
-                        <circle class="progress-circle" cx="60" cy="60" r="54" style="stroke: url(#gradient2)"></circle>
-                    </svg>
-                    <div class="progress-text">0%</div>
-                </div>
-                <div class="skill-name">Java</div>
-            </div>
-            <div class="skill-item" data-skill="80">
-                <div class="skill-icon">🐘</div>
-                <div class="circular-progress">
-                    <svg width="120" height="120">
-                        <defs>
-                            <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#0099cc;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#00d9ff;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <circle class="progress-circle-bg" cx="60" cy="60" r="54"></circle>
-                        <circle class="progress-circle" cx="60" cy="60" r="54" style="stroke: url(#gradient3)"></circle>
-                    </svg>
-                    <div class="progress-text">0%</div>
-                </div>
-                <div class="skill-name">PHP</div>
-            </div>
-           
-
+            <div class="skill-card"><i class="fab fa-python" aria-hidden="true"></i><span>Python</span></div>
+            <div class="skill-card"><i class="fas fa-database" aria-hidden="true"></i><span>SQL</span></div>
+            <div class="skill-card"><i class="fas fa-file-excel" aria-hidden="true"></i><span>Microsoft Excel</span></div>
+            <div class="skill-card"><i class="fas fa-chart-column" aria-hidden="true"></i><span>Power BI</span></div>
+            <div class="skill-card"><i class="fas fa-chart-pie" aria-hidden="true"></i><span>Tableau</span></div>
+            <div class="skill-card"><i class="fas fa-table" aria-hidden="true"></i><span>Pandas</span></div>
+            <div class="skill-card"><i class="fas fa-calculator" aria-hidden="true"></i><span>NumPy</span></div>
+            <div class="skill-card"><i class="fas fa-gears" aria-hidden="true"></i><span>Scikit-learn</span></div>
+            <div class="skill-card"><i class="fas fa-brain" aria-hidden="true"></i><span>PyTorch</span></div>
+            <div class="skill-card"><i class="fas fa-network-wired" aria-hidden="true"></i><span>TensorFlow</span></div>
+            <div class="skill-card"><i class="fas fa-lightbulb" aria-hidden="true"></i><span>SHAP</span></div>
+            <div class="skill-card"><i class="fas fa-comments" aria-hidden="true"></i><span>NLP</span></div>
+            <div class="skill-card"><i class="fas fa-database" aria-hidden="true"></i><span>MySQL</span></div>
+            <div class="skill-card"><i class="fas fa-leaf" aria-hidden="true"></i><span>MongoDB</span></div>
+            <div class="skill-card"><i class="fas fa-server" aria-hidden="true"></i><span>FastAPI</span></div>
+            <div class="skill-card"><i class="fab fa-docker" aria-hidden="true"></i><span>Docker</span></div>
+            <div class="skill-card"><i class="fab fa-git-alt" aria-hidden="true"></i><span>Git</span></div>
+            <div class="skill-card"><i class="fas fa-chart-column" aria-hidden="true"></i><span>DAX</span></div>
+            <div class="skill-card"><i class="fas fa-code" aria-hidden="true"></i><span>VS Code</span></div>
+            <div class="skill-card"><i class="fas fa-server" aria-hidden="true"></i><span>XAMPP</span></div>
         </div>
     </section>
 
     <section class="projects" id="projects">
         <h2 class="section-title">Featured <span>Projects</span></h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">❤️</div>
-                <div class="project-info">
-                    <h3 class="project-title">HealthTrack</h3>
-                    <p class="project-desc">HealthTrack is a smart health monitoring system that analyzes real-time data to track vital signs, detect risks, and provide personalized health insights.</p>
-                    <div class="project-tags">
-                        <span class="tag">PHP</span>
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">MySQL</span>
-                    </div>
-                    <a href="https://github.com/HimashMadushanka/HealthTrack" class="project-link">View Project →</a>
-                </div>
-            </div>
-              
-            <div class="project-card">
-                 <div class="project-image">🛒</div>
-                <div class="project-info">
-                    <h3 class="project-title">ShopEasy E-Commerce</h3>
-                    <p class="project-desc">ShopEasy is a smart e-commerce platform that delivers seamless shopping, real-time product updates, secure payments, and personalized user experiences.</p>
-                    <div class="project-tags">
-                        <span class="tag">Python (Flask)</span>
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">MySQL</span>
-                    </div>
-                    <a href="https://github.com/HimashMadushanka/Redstore" class="project-link">View Project →</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">🧮</div>
-                <div class="project-info">
-                    <h3 class="project-title">Calculator</h3>
-                    <p class="project-desc">A powerful calculator that applies advanced algorithms and neural-network–driven models to deliver predictive analytics and precise numeric insights.</p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                    </div>
-                    <a href="https://github.com/HimashMadushanka/calculator" class="project-link">View Project →</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">🖥️📅</div>
-                <div class="project-info">
-                    <h3 class="project-title">LMS</h3>
-                    <p class="project-desc">LabMaster – A smart Lab Management System that optimizes scheduling, tracks resources in real-time, and delivers actionable insights.</p>
-                    <div class="project-tags">
-                        <span class="tag">PHP</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">MySQL</span>
-                        
-                    </div>
-                    <a href="https://github.com/HimashMadushanka/calculator" class="project-link">View Project →</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">📈</div>
-                <div class="project-info">
-                    <h3 class="project-title">Sales_Performance</br>Analysis</h3>
-                    <p class="project-desc">A modern web app with responsive design, user login, and database connection for managing and viewing sales data.</p>
-                    <div class="project-tags">
-                        <span class="tag">Pandas</span>
-                        <span class="tag">Numpy</span>
-                        <span class="tag">matplotlib</span>
-                        <span class="tag">seaborn</span>
-                    </div>
-                    <a href="https://github.com/HimashMadushanka/Sales_Performance_Analysis" class="project-link">View Project →</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                 <div class="project-image">📈</div>
-                 <div class="project-info">
-                      <h3 class="project-title">Student Performance </br>Analysis</h3>
-                      <p class="project-desc">Comprehensive analysis of student performance data with machine learning models, feature engineering, and exploratory data visualization for academic insights.</p>
-                      <div class="project-tags">
-                          <span class="tag">Pandas</span>
-                          <span class="tag">Scikit-learn</span>
-                          <span class="tag">Matplotlib</span>
-                          <span class="tag">Seaborn</span>
-                          <span class="tag">SHAP</span>
-                          <span class="tag">Machine Learning</span>
-                      </div>
-                      <a href="https://github.com/HimashMadushanka/Student-Performance-Anlysics" class="project-link">View Project →</a>
-                 </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-image">📊</div>
-                <div class="project-info">
-                    <h3 class="project-title">COVID19_EDA</h3>
-                    <p class="project-desc">A modern web app with responsive design, user login, and database connection for managing, visualizing, and analyzing COVID-19 data.</p>
-                    <div class="project-tags">
-                        <span class="tag">Pandas</span>
-                        <span class="tag">Numpy</span>
-                        <span class="tag">matplotlib</span>
-                        <span class="tag">seaborn</span>
-                    </div>
-                    <a href="https://github.com/HimashMadushanka/COVID19_EDA" class="project-link">View Project →</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">📊</div>
-                <div class="project-info">
-                    <h3 class="project-title">AI_Based_Business </br>Analyzer</h3>
-                    <p class="project-desc">AI Based Business Analyzer is a modern app for easy sales tracking and smart business insights. their sales easily.</p>
-                    <div class="project-tags">
-                        <span class="tag">Pandas</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Numpy</span>
-                        <span class="tag">matplotlib</span>
-                        <span class="tag">seaborn</span>
-                    </div>
-                    <a href="https://github.com/HimashMadushanka/AI_Based_Business_Analyzer" class="project-link">View Project →</a>
-                </div>
-            </div>
-        
-            <div class="project-card">
-                <div class="project-image">📊</div>
-                <div class="project-info">
-                    <h3 class="project-title">Sales Performance Analysis (Power BI)</h3>
-                    <p class="project-desc">An interactive Power BI dashboard analyzing sales, profit, customer trends, and regional performance using DAX, Power Query, and data modeling.</p>
-                    <div class="project-tags">
-                        <span class="tag">Power BI</span>
-                        <span class="tag">DAX</span>
-                        <span class="tag">Power Query</span>
-                        <span class="tag">Data Modeling</span>
-                        <span class="tag">Pandas</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Numpy</span>
-                        <span class="tag">matplotlib</span>
-                        <span class="tag">seaborn</span>                       
-                    </div>
-                    <a href="https://github.com/HimashMadushanka/Sales-Performance-Analysis-Power-BI-Dashboard" class="project-link">View Project →</a>
-                </div>
-            </div>
+        <div class="project-tools">
+            <label class="visually-hidden" for="projectSearch">Search projects</label>
+            <input id="projectSearch" type="search" placeholder="Search projects..." autocomplete="off">
+            <label class="visually-hidden" for="projectCategory">Filter projects by category</label>
+            <select id="projectCategory">
+                <option value="all">All categories</option>
+                <option value="ai">AI &amp; machine learning</option>
+                <option value="analytics">Data &amp; analytics</option>
+                <option value="web">Web applications</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <p class="project-results" id="projectResults" aria-live="polite"></p>
+        <div class="project-chart" id="projectChart" role="group" aria-label="Filter projects by focus area"></div>
+        <div class="projects-grid"></div>
+        <div class="projects-more-wrap" id="projectsMoreWrap" hidden>
+            <button class="projects-more" id="showMoreProjects" type="button" hidden>SEE MORE PROJECTS</button>
         </div>
 
+
+    </section>
+
+    <section class="experience" id="experience">
+        <h2 class="section-title">Work <span>Experience</span></h2>
+        <div class="experience-timeline">
+            <article class="experience-card">
+                <div class="experience-heading">
+                    <div>
+                        <h3>Trainee Front Officer</h3>
+                        <p class="experience-company">Naomi Beach Hotel · Weligama, Sri Lanka</p>
+                    </div>
+                    <span class="experience-date">Mar 2023 – Feb 2025</span>
+                </div>
+                <ul class="experience-duties">
+                    <li>Maintained customer, reservation, and booking records to support accurate record-keeping and daily hotel operations.</li>
+                    <li>Reviewed booking, sales, and customer feedback information to understand customer needs and business performance.</li>
+                    <li>Assisted with daily operations and customer inquiries to help maintain smooth service delivery.</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <h2 class="section-title">My <span>Education</span></h2>
+        <div class="education-timeline">
+            <article class="education-card">
+                <div class="education-heading">
+                    <div>
+                        <h3>BSc (Hons) in Data Science</h3>
+                        <p class="education-institution">Sabaragamuwa University of Sri Lanka · Belihuloya</p>
+                    </div>
+                    <span class="education-date">2024 – Present</span>
+                </div>
+                <p class="education-detail">Current GPA: 3.00</p>
+            </article>
+            <article class="education-card">
+                <div class="education-heading">
+                    <div>
+                        <h3>G.C.E. Advanced Level — Physical Science Stream</h3>
+                        <p class="education-institution">MR/Thelijjawila Central College · Matara, Sri Lanka</p>
+                    </div>
+                    <span class="education-date">2018 – 2021</span>
+                </div>
+            </article>
+            <article class="education-card">
+                <div class="education-heading">
+                    <div>
+                        <h3>G.C.E. Ordinary Level (O/L)</h3>
+                        <p class="education-institution">Godapitiya Central College, Akuressa, Sri Lanka</p>
+                    </div>
+                    <span class="education-date">2013 – 2018</span>
+                </div>
+            </article>
+            <article class="education-card">
+                <div class="education-heading">
+                    <div>
+                        <h3>Primary Education</h3>
+                        <p class="education-institution">Godapitiya Maha Vidyalaya, Akuressa, Sri Lanka · Started Grade 1</p>
+                    </div>
+                    <span class="education-date">2007 – 2013</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="certifications" id="certifications">
+        <h2 class="section-title">My <span>Certifications</span></h2>
+        <div class="certifications-grid">
+            <article class="certification-card">
+                <i class="fas fa-certificate" aria-hidden="true"></i>
+                <div>
+                    <h3>Python for Beginners E-Certificate</h3>
+                    <p class="certification-provider">University of Moratuwa (UOM)</p>
+                    <p class="certification-description">Covers Python fundamentals, including variables, data types, conditions, loops, and basic programming.</p>
+                </div>
+            </article>
+            <article class="certification-card">
+                <i class="fas fa-certificate" aria-hidden="true"></i>
+                <div>
+                    <h3>Python Bootcamp</h3>
+                    <p class="certification-provider">Udemy</p>
+                    <p class="certification-description">Builds practical Python skills through coding exercises and small programming tasks.</p>
+                </div>
+            </article>
+            <article class="certification-card">
+                <i class="fas fa-certificate" aria-hidden="true"></i>
+                <div>
+                    <h3>Introduction to Tableau</h3>
+                    <p class="certification-provider">Simplilearn</p>
+                    <p class="certification-description">Introduces creating charts and interactive visualizations to explore and present data.</p>
+                </div>
+            </article>
+            <article class="certification-card">
+                <i class="fas fa-certificate" aria-hidden="true"></i>
+                <div>
+                    <h3>Power BI Data Modeling with DAX</h3>
+                    <p class="certification-provider">LinkedIn Learning</p>
+                    <p class="certification-description">Covers organizing data models and using DAX to create calculations and measures in Power BI.</p>
+                </div>
+            </article>
+            <article class="certification-card">
+                <i class="fas fa-certificate" aria-hidden="true"></i>
+                <div>
+                    <h3>Dashboards for Beginners</h3>
+                    <p class="certification-provider">Simplilearn</p>
+                    <p class="certification-description">Introduces dashboard basics, including presenting key information with clear visual summaries.</p>
+                </div>
+            </article>
+            <article class="certification-card">
+                <i class="fas fa-certificate" aria-hidden="true"></i>
+                <div>
+                    <h3>Data Cleaning and Manipulating with Python in Excel</h3>
+                    <p class="certification-provider">LinkedIn Learning</p>
+                    <p class="certification-description">Explores using Python in Excel to clean, transform, and analyze spreadsheet data.</p>
+                </div>
+            </article>
+            <article class="certification-card">
+                <i class="fas fa-certificate" aria-hidden="true"></i>
+                <div>
+                    <h3>The Git &amp; GitHub Bootcamp</h3>
+                    <p class="certification-provider">Udemy</p>
+                    <p class="certification-description">Covers version control with Git and collaborating on projects using GitHub.</p>
+                </div>
+            </article>
+            <article class="certification-card">
+                <i class="fas fa-certificate" aria-hidden="true"></i>
+                <div>
+                    <h3>The Complete Full-Stack Web Development Bootcamp</h3>
+                    <p class="certification-provider">Udemy · Certificate of Completion</p>
+                    <p class="certification-description">Learned how to build full-stack websites, including front-end interfaces and back-end functionality.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="achievements" id="achievements">
+        <h2 class="section-title">My <span>Achievements</span></h2>
+        <div class="achievements-grid">
+            <article class="achievement-card">
+                <button class="achievement-preview" type="button" aria-label="Enlarge certificate: The Business Analysis Experience Program">
+                    <img src="image/achievements/business-analysis.jpg" alt="Certificate of participation in The Business Analysis Experience Program" loading="lazy" decoding="async">
+                    <span class="preview-hint"><i class="fas fa-magnifying-glass-plus" aria-hidden="true"></i> Click to enlarge</span>
+                </button>
+                <div class="achievement-info">
+                    <h3>The Business Analysis Experience Program</h3>
+                    <p>Participated in a business analysis experience program organized by IEEE Young Professionals Sri Lanka and IEEE Lets Talk.</p>
+                    <p class="achievement-meta">October 11, 2025 · Informatics Institute of Technology, Colombo</p>
+                </div>
+            </article>
+            <article class="achievement-card">
+                <button class="achievement-preview" type="button" aria-label="Enlarge certificate: Data Xplore 2.0 and Online Dashboard Workshop">
+                    <img src="image/achievements/data-xplore.jpg" alt="Certificate of participation in Data Xplore 2.0 and its Online Dashboard Workshop" loading="lazy" decoding="async">
+                    <span class="preview-hint"><i class="fas fa-magnifying-glass-plus" aria-hidden="true"></i> Click to enlarge</span>
+                </button>
+                <div class="achievement-info">
+                    <h3>Data Xplore 2.0 &amp; Online Dashboard Workshop</h3>
+                    <p>Participated in data analysis and report submission for Data Xplore 2.0, along with an online dashboard workshop.</p>
+                    <p class="achievement-meta">April 25, 2026 · Statistics Society, University of Sri Jayewardenepura</p>
+                </div>
+            </article>
+            <article class="achievement-card">
+                <button class="achievement-preview" type="button" aria-label="Enlarge certificate: Engineering for Humanity 2026 Webinar">
+                    <img src="image/achievements/engineering-humanity.jpg" alt="Certificate of participation in the Engineering for Humanity 2026 pre-conference webinar" loading="lazy" decoding="async">
+                    <span class="preview-hint"><i class="fas fa-magnifying-glass-plus" aria-hidden="true"></i> Click to enlarge</span>
+                </button>
+                <div class="achievement-info">
+                    <h3>Engineering for Humanity 2026 Webinar</h3>
+                    <p>Attended a pre-conference webinar on AI-enabled energy infrastructure, exploring systems-level approaches to stronger, greener energy.</p>
+                    <p class="achievement-meta">April 28, 2026 · Engineers Without Borders Sri Lanka and gapHQ</p>
+                </div>
+            </article>
+            <article class="achievement-card">
+                <button class="achievement-preview" type="button" aria-label="Enlarge certificate: IEEE Digital Vesak Art Competition 2026">
+                    <img src="image/achievements/ieee-vesak-art-competition.jpg" alt="Certificate of participation in the IEEE Digital Vesak Art Competition 2026" loading="lazy" decoding="async">
+                    <span class="preview-hint"><i class="fas fa-magnifying-glass-plus" aria-hidden="true"></i> Click to enlarge</span>
+                </button>
+                <div class="achievement-info">
+                    <h3>IEEE Digital Vesak Art Competition 2026</h3>
+                    <p>Participated in a digital art competition celebrating Vesak through creative artwork.</p>
+                    <p class="achievement-meta">IEEE Student Branch · Sabaragamuwa University of Sri Lanka</p>
+                </div>
+            </article>
+            <article class="achievement-card">
+                <button class="achievement-preview" type="button" aria-label="Enlarge certificate: ArtistryX AI Digital Art Competition 2026">
+                    <img src="image/achievements/artistryx-ai-art-competition.jpg" alt="Certificate of participation in the ArtistryX AI Digital Art Competition 2026" loading="lazy" decoding="async">
+                    <span class="preview-hint"><i class="fas fa-magnifying-glass-plus" aria-hidden="true"></i> Click to enlarge</span>
+                </button>
+                <div class="achievement-info">
+                    <h3>ArtistryX — AI Digital Art Competition 2026</h3>
+                    <p>Created AI-assisted digital art for “Sri Lanka 2050: Tradition Meets the Future,” exploring creativity and originality.</p>
+                    <p class="achievement-meta">IEEE WIE Student Branch Affinity Group · Sabaragamuwa University of Sri Lanka</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <dialog class="certificate-lightbox" aria-label="Enlarged photo or certificate">
+        <button class="lightbox-close" type="button" aria-label="Close enlarged certificate">&times;</button>
+        <img class="lightbox-image" src="" alt="">
+        <p>Press Escape or click outside the image to close.</p>
+    </dialog>
+
+    <section class="volunteering" id="volunteering">
+        <h2 class="section-title">Volunteering &amp; <span>Leadership</span></h2>
+        <div class="volunteering-layout">
+            <article class="volunteer-feature">
+                <div class="volunteer-heading">
+                    <h3>HOPE 2.0</h3>
+                    <span>2025</span>
+                </div>
+                <p class="volunteer-position"><strong>Position:</strong> Knowledge Team · IEEE WIE Student Branch Affinity Group, Sabaragamuwa University of Sri Lanka</p>
+                <div class="volunteer-slideshow" aria-label="HOPE 2.0 volunteer event photos">
+                    <img class="volunteer-slide is-active" src="image/optimized/hope-2.0-day-two.jpg" alt="HOPE 2.0 Day Two learning activities" loading="lazy" decoding="async">
+                    <img class="volunteer-slide" src="image/optimized/hope-2.0-team.jpg" alt="HOPE 2.0 knowledge team members" loading="lazy" fetchpriority="low" decoding="async">
+                    <img class="volunteer-slide" src="image/optimized/hope-2.0-mentoring.jpg" alt="Volunteers helping students during HOPE 2.0" loading="lazy" fetchpriority="low" decoding="async">
+                    <img class="volunteer-slide" src="image/optimized/hope-2.0-workshop.jpg" alt="A student working on a laptop during the HOPE 2.0 workshop" loading="lazy" fetchpriority="low" decoding="async">
+                    <img class="volunteer-slide" src="image/optimized/hope-2.0-microbit.jpg" alt="Hands-on micro:bit activity at HOPE 2.0" loading="lazy" fetchpriority="low" decoding="async">
+                    <button class="volunteer-slide-control volunteer-slide-prev" type="button" aria-label="Previous HOPE 2.0 photo">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <span class="volunteer-slide-count" aria-live="polite">1 / 5</span>
+                    <button class="volunteer-slide-control volunteer-slide-next" type="button" aria-label="Next HOPE 2.0 photo">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <p class="volunteer-image-explanation">As a volunteer with the HOPE 2.0 knowledge team, I supported students as they explored STEM through hands-on activities. They learned digital skills, asked questions, and tested their ideas. The experience strengthened my communication and teamwork while helping encourage young people’s curiosity and confidence.</p>
+                <p class="volunteer-caption" aria-live="polite">HOPE 2.0 · Day Two learning activities</p>
+            </article>
+            <div class="volunteer-roles" aria-label="Other volunteer and leadership roles">
+                <article class="volunteer-feature">
+                    <div class="volunteer-heading">
+                        <h3>සිප්මංසල</h3>
+                        <span>2026</span>
+                    </div>
+                    <p class="volunteer-position"><strong>Position:</strong> Volunteer · Faculty of Computing, Sabaragamuwa University of Sri Lanka</p>
+                    <p class="volunteer-summary"></p>
+                    <div class="volunteer-slideshow sipmansala-slideshow" aria-label="සිප්මංසල volunteer photos">
+                            <img class="volunteer-slide is-active" src="image/optimized/1782474576078.jpg" alt="The සිප්මංසල volunteer team" loading="lazy" decoding="async">
+                            <img class="volunteer-slide" src="image/optimized/1782474576208.jpg" alt="සිප්මංසල student bookmarks prepared for the program" loading="lazy" fetchpriority="low" decoding="async">
+                            <img class="volunteer-slide" src="image/optimized/1782474651913.jpg" alt="සිප්මංසල learning materials at the student session" loading="lazy" fetchpriority="low" decoding="async">
+                            <img class="volunteer-slide" src="image/optimized/download.jpg" alt="Teaching students during a සිප්මංසල session" loading="lazy" fetchpriority="low" decoding="async">
+                            <button class="volunteer-slide-control volunteer-slide-prev" type="button" aria-label="Previous සිප්මංසල photo"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                            <span class="volunteer-slide-count" aria-live="polite">1 / 4</span>
+                            <button class="volunteer-slide-control volunteer-slide-next" type="button" aria-label="Next සිප්මංසල photo"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                    </div>
+                    <p class="volunteer-image-explanation">Helped deliver English, Mathematics, Science, and IT sessions for G.C.E. O/L students, and shared IT and other career pathways to help them explore future opportunities. The experience strengthened my communication, presentation, and leadership skills while allowing me to support the community.</p>
+                    <p class="volunteer-caption sipmansala-caption" aria-live="polite">සිප්මංසල · Volunteer team</p>
+                </article>
+                <article class="volunteer-feature">
+                    <div class="volunteer-heading">
+                        <h3>VRUKSHA</h3>
+                        <span>2026</span>
+                    </div>
+                    <p class="volunteer-position"><strong>Position:</strong> Co-Chair · Leo Club of Sabaragamuwa University of Sri Lanka</p>
+                    <p class="volunteer-summary"></p>
+                    <div class="volunteer-slideshow vruksha-slideshow" aria-label="VRUKSHA Season 7 photos">
+                        <img class="volunteer-slide is-active" src="image/optimized/ec37d084-f955-4b4f-be76-579bda38afe3.jpg" alt="VRUKSHA Season 7 Leo Tree Plantation Challenge team celebration" loading="lazy" decoding="async">
+                        <img class="volunteer-slide" src="image/optimized/IMG_6371.jpg" alt="VRUKSHA Season 7 organizing committee, including Co-Chair Himash Madushanka" loading="lazy" fetchpriority="low" decoding="async">
+                        <img class="volunteer-slide" src="image/optimized/IMG_6372.jpg" alt="VRUKSHA Season 7 organizing committee team members" loading="lazy" fetchpriority="low" decoding="async">
+                        <img class="volunteer-slide" src="image/optimized/IMG_6721.jpg" alt="Volunteers gathered after planting a tree" loading="lazy" fetchpriority="low" decoding="async">
+                        <img class="volunteer-slide" src="image/optimized/IMG_6722.jpg" alt="A volunteer planting a tree during VRUKSHA" loading="lazy" fetchpriority="low" decoding="async">
+                        <button class="volunteer-slide-control volunteer-slide-prev" type="button" aria-label="Previous VRUKSHA photo"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                        <span class="volunteer-slide-count" aria-live="polite">1 / 5</span>
+                        <button class="volunteer-slide-control volunteer-slide-next" type="button" aria-label="Next VRUKSHA photo"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                    </div>
+                    <p class="volunteer-image-explanation">As Co-Chair, I helped coordinate volunteer teams, organize responsibilities, and communicate across the committee. I supported the group in resolving challenges and completing the project. The experience strengthened my leadership, project planning, collaboration, decision-making, and time-management skills while showing the value of teamwork in a community initiative.</p>
+                    <p class="volunteer-caption vruksha-caption" aria-live="polite">VRUKSHA · Season 7 team</p>
+                </article>
+                <article class="volunteer-feature">
+                    <div class="volunteer-heading">
+                        <h3>Career Guidance Program</h3>
+                        <span>2026</span>
+                    </div>
+                    <p class="volunteer-position"><strong>Position:</strong> Co-Chair · Rotaract Club, Sabaragamuwa University of Sri Lanka</p>
+                    <p class="volunteer-summary"></p>
+                    <div class="volunteer-slideshow career-guidance-slideshow" aria-label="Career guidance program photos">
+                            <img class="volunteer-slide is-active" src="image/optimized/28d1506f-d850-4b35-aa81-453515a93eaf.jpg" alt="Students attending the career guidance program" loading="lazy" decoding="async">
+                            <img class="volunteer-slide" src="image/optimized/92aae81d-2979-4a3b-9222-897f8eb31b55.jpg" alt="The student organizing team at the program" loading="lazy" fetchpriority="low" decoding="async">
+                            <img class="volunteer-slide" src="image/optimized/0813fc5d-caad-43ec-8d4b-c9393bdeb4ed.jpg" alt="Himash speaking to students at the program" loading="lazy" fetchpriority="low" decoding="async">
+                            <img class="volunteer-slide" src="image/optimized/4199FD12-E608-4375-AABF-FFE736581CAC.jpg" alt="Presenting a thank-you gift to a program speaker" loading="lazy" fetchpriority="low" decoding="async">
+                            <img class="volunteer-slide" src="image/optimized/e648e179-7e4c-440d-bbeb-254f505b5dcc.jpg" alt="Career guidance program speaker and event poster" loading="lazy" fetchpriority="low" decoding="async">
+                            <button class="volunteer-slide-control volunteer-slide-prev" type="button" aria-label="Previous career guidance program photo"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                            <span class="volunteer-slide-count" aria-live="polite">1 / 5</span>
+                            <button class="volunteer-slide-control volunteer-slide-next" type="button" aria-label="Next career guidance program photo"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                    </div>
+                    <p class="volunteer-image-explanation">As Co-Chair, I helped coordinate a career guidance program that connected students with learning opportunities. I supported planning and delivery alongside the organizing team. The experience strengthened my collaboration and event coordination skills while helping students explore possible career pathways.</p>
+                    <p class="volunteer-caption career-guidance-caption" aria-live="polite">Career guidance · Student session</p>
+                </article>
+            </div>
+        </div>
     </section>
     <section class="contact" id="contact">
-        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <h2 class="section-title">Contact <span>Me!</span></h2>
         <div class="contact-content">
-            <p class="contact-text">I'm always interested in hearing about new opportunities, collaborations, or just having a chat about technology and data science.</p>
-            <div class="contact-buttons">
-                <a href="mailto:himashmadushanka975@gmail.com" class="btn btn-primary">Email Me</a>
-                <a href="https://github.com/HimashMadushanka" class="btn btn-secondary" target="_blank">GitHub Profile</a>
-            </div>
+            <p class="contact-text">Have a question or want to work together? Send me a message.</p>
+            <form class="contact-form" action="https://formsubmit.co/himashmadushanka975@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New message from your portfolio">
+                <input type="hidden" name="_template" value="table">
+                <input type="text" name="name" placeholder="Full Name" autocomplete="name" required>
+                <input type="email" name="email" placeholder="Email Address" autocomplete="email" required>
+                <input type="tel" name="phone" placeholder="Mobile Number" autocomplete="tel">
+                <input type="text" name="subject" placeholder="Email Subject" required>
+                <textarea name="message" placeholder="Your Message" rows="7" required></textarea>
+                <button class="contact-submit" type="submit">Send Message <i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+            </form>
+            <p class="contact-form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
+
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/himash-madushanka" class="social-link" title="LinkedIn" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/HimashMadushanka" class="social-link" title="GitHub" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.instagram.com/madushankahimash?igsh=OGRudXNjM2NkNHZ3&utm_source=qr" class="social-link" title="Instagram" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.facebook.com/share/14LUfJgiMvK/?mibextid=wwXIfr" class="social-link" title="Facebook" target="_blank">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://twitter.com/HimashMadushanka" class="social-link" title="Twitter" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="mailto:himashmadushanka975@gmail.com" class="social-link" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
+                <a href="https://www.linkedin.com/in/himash-madushanka-758a4839b/" class="social-link" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://github.com/HimashMadushanka" class="social-link" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/madushankahimash?igsh=OGRudXNjM2NkNHZ3&utm_source=qr" class="social-link" title="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/share/14LUfJgiMvK/?mibextid=wwXIfr" class="social-link" title="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook" aria-hidden="true"></i></a>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Himash Madushanka. All rights reserved.</p>
-    </footer> 
+        <p>&copy; 2026 Himash Madushanka. All rights reserved.</p>
+    </footer>
 
     <script>
+        (async function initializeSiteContent() {
+            try {
+                const response = await fetch('site-content.json');
+                if (!response.ok) throw new Error('Site content could not be loaded');
+                const content = await response.json();
+                if (content.header) document.querySelector('header').innerHTML = content.header;
+                Object.entries(content.sections || {}).forEach(([sectionId, markup]) => {
+                    const section = document.getElementById(sectionId);
+                    if (section) section.innerHTML = markup;
+                });
+                if (content.footer) document.querySelector('footer').innerHTML = content.footer;
+            } catch (error) {
+                console.warn('Using the built-in page content because site-content.json could not be loaded.', error);
+            }
         // Hamburger menu
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
 
         hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', String(!isExpanded));
+            hamburger.setAttribute('aria-label', isExpanded ? 'Open navigation menu' : 'Close navigation menu');
+            navMenu.classList.toggle('active', !isExpanded);
         });
 
         // Smooth scrolling
@@ -405,6 +500,8 @@
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 navMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                hamburger.setAttribute('aria-label', 'Open navigation menu');
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth' });
@@ -412,26 +509,402 @@
             });
         });
 
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
+        // Merge curated project details with the user's current public GitHub repositories.
+        async function loadProjects() {
+            const projectGrid = document.querySelector('.projects-grid');
+            const projectSearch = document.getElementById('projectSearch');
+            const projectCategory = document.getElementById('projectCategory');
+            const projectResults = document.getElementById('projectResults');
+            const projectChart = document.getElementById('projectChart');
+            const showMoreProjects = document.getElementById('showMoreProjects');
+            const projectsMoreWrap = document.getElementById('projectsMoreWrap');
+            const projectPageSize = 6;
+            let visibleProjectLimit = projectPageSize;
+            let isProjectsExpanded = false;
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+            async function fetchGithubRepositories() {
+                const controller = new AbortController();
+                const timeout = setTimeout(() => controller.abort(), 1000);
+                try {
+                    const response = await fetch(
+                        'https://api.github.com/users/HimashMadushanka/repos?per_page=100&sort=updated',
+                        { headers: { Accept: 'application/vnd.github+json' }, signal: controller.signal }
+                    );
+                    return response.ok ? await response.json() : [];
+                } catch (error) {
+                    return [];
+                } finally {
+                    clearTimeout(timeout);
+                }
+            }
+
+            try {
+                const [response, githubRepositories] = await Promise.all([
+                    fetch('projects.json'),
+                    fetchGithubRepositories()
+                ]);
+                if (!response.ok) throw new Error('Project data could not be loaded');
+                const projects = await response.json();
+                if (!Array.isArray(projects)) throw new Error('Project data must be a list');
+
+                const curatedRepositories = new Set(projects.map(project => {
+                    try { return new URL(project.url).pathname.split('/').filter(Boolean).pop().toLowerCase(); }
+                    catch (error) { return ''; }
+                }));
+                const excludedRepositories = new Set([
+                    'himashmadushanka',
+                    'ecommerce-sales-data-analysis',
+                    'sales-performance-analysis-power-bi-dashboard',
+                    'covid19_eda',
+                    'scrapemaster',
+                    'sales_performance_analysis',
+                    'student-performance-anlysics',
+                    'calculator',
+                    'global-supply-chain-risk-prediction',
+                    'octwave_3.0-compertition',
+                    'dataxnova-competition'
+                ]);
+                githubRepositories
+                    .filter(repository => repository && !repository.fork && !repository.archived
+                        && !repository.private && !/\.github\.io$/i.test(repository.name)
+                        && !excludedRepositories.has(repository.name.toLowerCase()))
+                    .forEach(repository => {
+                        const repositoryName = repository.name.toLowerCase();
+                        if (curatedRepositories.has(repositoryName)) return;
+
+                        const tags = [repository.language, ...(repository.topics || [])]
+                            .filter(Boolean)
+                            .filter((tag, index, allTags) => allTags.findIndex(item => item.toLowerCase() === tag.toLowerCase()) === index)
+                            .slice(0, 6);
+                        projects.push({
+                            title: repository.name.replace(/[-_]+/g, ' ').replace(/\b\w/g, letter => letter.toUpperCase()),
+                            description: repository.description || 'Public GitHub repository.',
+                            tags,
+                            url: repository.html_url
+                        });
+                    });
+
+                const fragment = document.createDocumentFragment();
+                projects.forEach(project => {
+                    const card = document.createElement('article');
+                    card.className = 'project-card';
+
+                    const info = document.createElement('div');
+                    info.className = 'project-info';
+
+                    const title = document.createElement('h3');
+                    title.className = 'project-title';
+                    title.textContent = project.title;
+
+                    const description = document.createElement('p');
+                    description.className = 'project-desc';
+                    description.textContent = project.description;
+
+                    const tags = document.createElement('div');
+                    tags.className = 'project-tags';
+                    project.tags.forEach(tagText => {
+                        const tag = document.createElement('span');
+                        tag.className = 'tag';
+                        tag.textContent = tagText;
+                        tags.appendChild(tag);
+                    });
+
+                    const link = document.createElement('a');
+                    link.className = 'project-link';
+                    link.href = project.url;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                    link.append('View on GitHub ');
+                    const arrow = document.createElement('i');
+                    arrow.className = 'fas fa-arrow-right';
+                    arrow.setAttribute('aria-hidden', 'true');
+                    link.appendChild(arrow);
+
+                    info.append(title, description, tags, link);
+                    card.appendChild(info);
+                    fragment.appendChild(card);
+                });
+                projectGrid.replaceChildren(fragment);
+
+                const projectCards = Array.from(projectGrid.querySelectorAll('.project-card'));
+                const projectCategories = [
+                    { id: 'ai', label: 'AI & ML', matches: /artificial intelligence|\bai\b|machine learning|\bnlp\b|sentiment|loan default/i },
+                    { id: 'analytics', label: 'Analytics', matches: /analytics|dashboard|power bi|sales data|tourism intelligence|cost of living/i },
+                    { id: 'web', label: 'Web apps', matches: /web application|e-commerce|booking system|scrapex|healthtrack/i },
+                    { id: 'other', label: 'Other', matches: null }
+                ];
+
+                function getProjectCategory(card) {
+                    const content = card.textContent.toLowerCase();
+                    for (const category of projectCategories.slice(0, 3)) {
+                        if (category.matches.test(content)) return category.id;
+                    }
+                    return 'other';
+                }
+
+                function filterProjects(resetLimit = true) {
+                    const query = projectSearch.value.trim().toLowerCase();
+                    const category = projectCategory.value;
+                    if (resetLimit) {
+                        visibleProjectLimit = projectPageSize;
+                        isProjectsExpanded = false;
+                    }
+
+                    const matchingCards = projectCards.filter(card => {
+                        const matchesQuery = card.textContent.toLowerCase().includes(query);
+                        const matchesCategory = category === 'all' || getProjectCategory(card) === category;
+                        return matchesQuery && matchesCategory;
+                    });
+
+                    projectCards.forEach(card => {
+                        const matchingIndex = matchingCards.indexOf(card);
+                        card.hidden = matchingIndex === -1 || matchingIndex >= visibleProjectLimit;
+                    });
+
+                    const shownCount = Math.min(visibleProjectLimit, matchingCards.length);
+                    projectResults.textContent = `Showing ${shownCount} of ${matchingCards.length} ${matchingCards.length === 1 ? 'project' : 'projects'}`;
+                    const canCollapse = isProjectsExpanded && matchingCards.length > projectPageSize;
+                    const canExpand = !isProjectsExpanded && matchingCards.length > visibleProjectLimit;
+                    showMoreProjects.hidden = !canCollapse && !canExpand;
+                    projectsMoreWrap.hidden = showMoreProjects.hidden;
+                    if (!showMoreProjects.hidden) {
+                        showMoreProjects.textContent = isProjectsExpanded ? 'SEE LESS' : 'SEE MORE PROJECTS';
+                    }
+                    renderProjectChart();
+                }
+
+                function renderProjectChart() {
+                    const counts = Object.fromEntries(projectCategories.map(category => [category.id, 0]));
+                    projectCards.forEach(card => counts[getProjectCategory(card)]++);
+                    const maximum = Math.max(...Object.values(counts), 1);
+                    const buttons = projectCategories.map(category => {
+                        const selected = projectCategory.value === category.id;
+                        const button = document.createElement('button');
+                        button.className = `project-chart-item${selected ? ' is-selected' : ''}`;
+                        button.type = 'button';
+                        button.dataset.category = category.id;
+                        button.setAttribute('aria-pressed', String(selected));
+
+                        const label = document.createElement('span');
+                        label.className = 'project-chart-label';
+                        label.textContent = category.label;
+                        const track = document.createElement('span');
+                        track.className = 'project-chart-track';
+                        const bar = document.createElement('span');
+                        bar.className = 'project-chart-bar';
+                        bar.style.width = `${(counts[category.id] / maximum) * 100}%`;
+                        track.appendChild(bar);
+                        const count = document.createElement('span');
+                        count.className = 'project-chart-count';
+                        count.textContent = counts[category.id];
+
+                        button.append(label, track, count);
+                        button.addEventListener('click', () => {
+                            projectCategory.value = selected ? 'all' : category.id;
+                            filterProjects();
+                        });
+                        return button;
+                    });
+                    projectChart.replaceChildren(...buttons);
+                }
+
+                projectSearch.addEventListener('input', filterProjects);
+                projectCategory.addEventListener('change', filterProjects);
+                showMoreProjects.addEventListener('click', () => {
+                    isProjectsExpanded = !isProjectsExpanded;
+                    visibleProjectLimit = isProjectsExpanded ? projectCards.length : projectPageSize;
+                    filterProjects(false);
+                });
+                filterProjects();
+                document.dispatchEvent(new Event('projects:loaded'));
+            } catch (error) {
+                projectResults.textContent = 'Projects could not be loaded. Please refresh the page.';
+                console.error(error);
+            }
+        }
+
+        loadProjects();
+        // Theme switch, remembering the visitor's choice
+        const themeToggle = document.getElementById('themeToggle');
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        if (savedTheme === 'light') document.documentElement.dataset.theme = 'light';
+
+        function updateThemeButton() {
+            const isLight = document.documentElement.dataset.theme === 'light';
+            themeToggle.innerHTML = `<i class="fas ${isLight ? 'fa-moon' : 'fa-sun'}" aria-hidden="true"></i>`;
+            themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
+        }
+
+        updateThemeButton();
+        themeToggle.addEventListener('click', () => {
+            const isLight = document.documentElement.dataset.theme !== 'light';
+            document.documentElement.dataset.theme = isLight ? 'light' : 'dark';
+            localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
+            updateThemeButton();
+        });
+
+        // Reveal content once when it enters the viewport.
+        const revealObserver = 'IntersectionObserver' in window
+            && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+            ? new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' })
+            : null;
+
+        function observeRevealElements(elements) {
+            if (!revealObserver) return;
+            const revealOrder = new Map();
+            elements.forEach(element => {
+                const group = element.parentElement;
+                const order = revealOrder.get(group) || 0;
+                revealOrder.set(group, order + 1);
+                element.style.setProperty('--reveal-delay', `${(order % 5) * 60}ms`);
+                element.classList.add('scroll-reveal');
+                if (element.matches('.section-title, .about-text')) {
+                    element.classList.add('reveal-slide-left');
+                } else if (element.matches('.project-card, .skill-card, .certification-card')) {
+                    element.classList.add('reveal-zoom');
+                } else {
+                    element.classList.add('reveal-slide-right');
+                }
+                revealObserver.observe(element);
+            });
+        }
+
+        observeRevealElements(document.querySelectorAll(
+            '.section-title, .about-text, .about-stats, .experience-card, .education-card, .certification-card, .achievement-card, .volunteer-feature, .skill-card, .contact-form'
+        ));
+        document.addEventListener('projects:loaded', () => {
+            observeRevealElements(document.querySelectorAll('.projects-grid .project-card'));
+        });
+        // Send contact form submissions and show the result without leaving the page
+        const contactForm = document.querySelector('.contact-form');
+        const contactFormStatus = document.getElementById('contactFormStatus');
+        contactForm.addEventListener('submit', async event => {
+            event.preventDefault();
+            if (!contactForm.reportValidity()) return;
+
+            const submitButton = contactForm.querySelector('[type="submit"]');
+            submitButton.disabled = true;
+            contactFormStatus.textContent = 'Sending your message…';
+            contactFormStatus.classList.remove('is-error');
+
+            try {
+                const response = await fetch('https://formsubmit.co/ajax/himashmadushanka975@gmail.com', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(Object.fromEntries(new FormData(contactForm)))
+                });
+                const result = await response.json();
+                if (!response.ok || result.success === false || result.success === 'false') throw new Error('Message could not be sent');
+                contactFormStatus.textContent = 'Thanks! Your message has been sent.';
+                contactForm.reset();
+            } catch (error) {
+                contactFormStatus.textContent = 'Message could not be sent. Please email himashmadushanka975@gmail.com directly.';
+                contactFormStatus.classList.add('is-error');
+            } finally {
+                submitButton.disabled = false;
+            }
+        });
+        // Certificate image lightbox
+        const certificateDialog = document.querySelector('.certificate-lightbox');
+        const enlargedCertificate = certificateDialog.querySelector('.lightbox-image');
+
+        document.querySelectorAll('.achievement-preview').forEach(preview => {
+            preview.addEventListener('click', () => {
+                const certificate = preview.querySelector('img');
+                enlargedCertificate.src = certificate.src;
+                enlargedCertificate.alt = certificate.alt;
+                certificateDialog.showModal();
+            });
+        });
+
+        document.querySelectorAll('.volunteer-slide').forEach(photo => {
+            photo.tabIndex = 0;
+            photo.setAttribute('role', 'button');
+            photo.setAttribute('aria-label', `Enlarge photo: ${photo.alt}`);
+            photo.addEventListener('click', () => {
+                enlargedCertificate.src = photo.src;
+                enlargedCertificate.alt = photo.alt;
+                certificateDialog.showModal();
+            });
+            photo.addEventListener('keydown', event => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    photo.click();
                 }
             });
-        }, observerOptions);
+        });
+        certificateDialog.querySelector('.lightbox-close').addEventListener('click', () => {
+            certificateDialog.close();
+        });
 
-        document.querySelectorAll('.skill-item, .project-card, .stat-box').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(50px)';
-            el.style.transition = 'all 0.6s ease';
-            observer.observe(el);
+        certificateDialog.addEventListener('click', event => {
+            if (event.target === certificateDialog) {
+                certificateDialog.close();
+            }
+        });
+
+        certificateDialog.addEventListener('keydown', event => {
+            if (event.key === 'Escape') {
+                event.preventDefault();
+                certificateDialog.close();
+            }
+        });
+
+        certificateDialog.addEventListener('close', () => {
+            enlargedCertificate.src = '';
+            enlargedCertificate.alt = '';
+        });
+
+        // Volunteer photo slideshows
+        const volunteerSlideGroups = [
+            {
+                slideshow: document.querySelector('.volunteer-feature .volunteer-slideshow'),
+                caption: document.querySelector('.volunteer-feature .volunteer-caption'),
+                captions: ['HOPE 2.0 · Day Two learning activities', 'HOPE 2.0 · Knowledge team', 'HOPE 2.0 · Supporting students', 'HOPE 2.0 · Digital skills workshop', 'HOPE 2.0 · Hands-on micro:bit activity']
+            },
+            {
+                slideshow: document.querySelector('.sipmansala-slideshow'),
+                caption: document.querySelector('.sipmansala-caption'),
+                captions: ['සිප්මංසල · Volunteer team', 'සිප්මංසල · Student bookmarks', 'සිප්මංසල · Learning materials', 'සිප්මංසල · Teaching session']
+            },
+            {
+                slideshow: document.querySelector('.vruksha-slideshow'),
+                caption: document.querySelector('.vruksha-caption'),
+                captions: ['VRUKSHA · Season 7 team', 'VRUKSHA · Organizing committee', 'VRUKSHA · Committee members', 'VRUKSHA · Tree planting team', 'VRUKSHA · Planting a tree']
+            },
+            {
+                slideshow: document.querySelector('.career-guidance-slideshow'),
+                caption: document.querySelector('.career-guidance-caption'),
+                captions: ['Career guidance · Student session', 'Career guidance · Organizing team', 'Career guidance · Student address', 'Career guidance · Thanking the speaker', 'Career guidance · Guest lecture']
+            }
+        ];
+
+        volunteerSlideGroups.forEach(({ slideshow, caption, captions }) => {
+            const slides = Array.from(slideshow.querySelectorAll('.volunteer-slide'));
+            const count = slideshow.querySelector('.volunteer-slide-count');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                currentSlide = (index + slides.length) % slides.length;
+                slides.forEach((slide, slideIndex) => {
+                    const isActive = slideIndex === currentSlide;
+                    slide.classList.toggle('is-active', isActive);
+                    slide.setAttribute('aria-hidden', String(!isActive));
+                });
+                count.textContent = `${currentSlide + 1} / ${slides.length}`;
+                caption.textContent = captions[currentSlide];
+            }
+
+            slideshow.querySelector('.volunteer-slide-prev').addEventListener('click', () => showSlide(currentSlide - 1));
+            slideshow.querySelector('.volunteer-slide-next').addEventListener('click', () => showSlide(currentSlide + 1));
+            showSlide(0);
         });
 
         // Parallax effect
@@ -455,36 +928,50 @@
             }
         });
 
-        // Typing effect
+        // Type the hero heading without breaking its spans or line breaks.
         const heroText = document.querySelector('.hero h1');
-        const text = heroText.innerHTML;
-        heroText.innerHTML = '';
-        let i = 0;
+        const heroTextWalker = document.createTreeWalker(heroText, NodeFilter.SHOW_TEXT);
+        const heroTextNodes = [];
+        while (heroTextWalker.nextNode()) heroTextNodes.push(heroTextWalker.currentNode);
 
-        function typeWriter() {
-            if (i < text.length) {
-                heroText.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 50);
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && heroTextNodes.length) {
+            const heroTextParts = heroTextNodes.map(node => node.textContent);
+            heroTextNodes.forEach(node => { node.textContent = ''; });
+            let partIndex = 0;
+            let characterIndex = 0;
+
+            function typeWriter() {
+                if (partIndex >= heroTextNodes.length) return;
+                const currentPart = heroTextParts[partIndex];
+                heroTextNodes[partIndex].textContent += currentPart.charAt(characterIndex);
+                characterIndex++;
+
+                if (characterIndex >= currentPart.length) {
+                    partIndex++;
+                    characterIndex = 0;
+                }
+                if (partIndex < heroTextNodes.length) setTimeout(typeWriter, 35);
             }
+
+            setTimeout(typeWriter, 350);
         }
-
-        setTimeout(typeWriter, 500);
-
         // Animated counter for stats
         const statNumbers = document.querySelectorAll('.stat-number');
         let hasAnimated = false;
 
-        const statsObserver = new IntersectionObserver((entries) => {
+        const statsObserver = 'IntersectionObserver' in window
+            && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+            ? new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && !hasAnimated) {
                     hasAnimated = true;
+                    observer.unobserve(entry.target);
                     statNumbers.forEach(stat => {
                         const target = stat.textContent;
                         const isPercent = target.includes('%');
                         const num = parseInt(target);
                         let current = 0;
-                        
+
                         const increment = num / 50;
                         const timer = setInterval(() => {
                             current += increment;
@@ -498,55 +985,12 @@
                     });
                 }
             });
-        });
+        })
+            : null;
 
-        statsObserver.observe(document.querySelector('.about-stats'));
+        if (statsObserver) statsObserver.observe(document.querySelector('.about-stats'));
 
-        // Skill bar animation with loading effect
-        let skillsAnimated = false;
-        const skillsSection = document.querySelector('.skills');
-
-        const skillsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !skillsAnimated) {
-                    skillsAnimated = true;
-                    
-                    const skillItems = document.querySelectorAll('.skill-item');
-                    
-                    skillItems.forEach((item, index) => {
-                        setTimeout(() => {
-                            const targetPercentage = parseInt(item.getAttribute('data-skill'));
-                            const progressCircle = item.querySelector('.progress-circle');
-                            const progressText = item.querySelector('.progress-text');
-                            
-                            const radius = 54;
-                            const circumference = 2 * Math.PI * radius;
-                            
-                            let currentPercentage = 0;
-                            const increment = targetPercentage / 100;
-                            
-                            const timer = setInterval(() => {
-                                currentPercentage += increment;
-                                
-                                if (currentPercentage >= targetPercentage) {
-                                    currentPercentage = targetPercentage;
-                                    clearInterval(timer);
-                                }
-                                
-                                const offset = circumference - (currentPercentage / 100) * circumference;
-                                progressCircle.style.strokeDashoffset = offset;
-                                progressText.textContent = Math.floor(currentPercentage) + '%';
-                            }, 20);
-                            
-                        }, index * 150);
-                    });
-                }
-            });
-        }, { threshold: 0.3 });
-
-        if (skillsSection) {
-            skillsObserver.observe(skillsSection);
-        }
+        })();
     </script>
 </body>
 </html>

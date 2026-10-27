@@ -1,0 +1,29 @@
+# Secrets and local environment settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+credentials.json
+
+# Private or local-only data (keep public site content in the project root)
+/private/
+/data-private/
+*.local.json
+
+# Dependencies, build output, and local tooling
+node_modules/
+dist/
+build/
+.cache/
+.vscode/
+.idea/
+
+# Operating system and temporary files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+*.tmp
+*.temp
