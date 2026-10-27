@@ -24,6 +24,7 @@
             z-index: 1000;
             background: rgba(10, 14, 39, 0.8);
             backdrop-filter: blur(10px);
+            gap: 1.5rem;
         }
 
         .logo {
@@ -34,19 +35,29 @@
 
         nav ul {
             display: flex;
-            gap: 3rem;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 1.25rem;
             list-style: none;
+        }
+
+        header nav {
+            margin-left: auto;
         }
 
         nav a {
             color: #ffffff;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             transition: color 0.3s;
             position: relative;
         }
 
         nav a:hover {
+            color: #00d9ff;
+        }
+
+        nav a.active {
             color: #00d9ff;
         }
 
@@ -61,7 +72,8 @@
             transition: width 0.3s;
         }
 
-        nav a:hover::after {
+        nav a:hover::after,
+        nav a.active::after {
             width: 100%;
         }
 

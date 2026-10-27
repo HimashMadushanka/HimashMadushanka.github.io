@@ -6,12 +6,13 @@
     <title>Himash Madushanka - Portfolio</title>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=10">
+    <link rel="stylesheet" href="style.css?v=12">
 
 </head>
 <body>
     <header>
         <div class="logo">Himash</div>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme"><i class="fas fa-sun" aria-hidden="true"></i></button>
         <nav>
             <ul id="navMenu">
                 <li><a href="#home">Home</a></li>
@@ -26,7 +27,6 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme"><i class="fas fa-sun" aria-hidden="true"></i></button>
         <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-controls="navMenu" aria-expanded="false">
             <span></span>
             <span></span>
@@ -454,8 +454,6 @@
                 <textarea name="message" placeholder="Your Message" rows="7" required></textarea>
                 <button class="contact-submit" type="submit">Send Message <i class="fas fa-paper-plane" aria-hidden="true"></i></button>
             </form>
-            <p class="contact-form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
-
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/himash-madushanka-758a4839b/" class="social-link" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
                 <a href="https://github.com/HimashMadushanka" class="social-link" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i></a>
@@ -505,9 +503,39 @@
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth' });
+                    setActiveNavLink(this);
                 }
             });
         });
+
+        // Keep the matching navigation tab highlighted as the page scrolls.
+        const navLinks = Array.from(navMenu.querySelectorAll('a[href^="#"]'));
+        const navSections = navLinks
+            .map(link => document.querySelector(link.getAttribute('href')))
+            .filter(Boolean);
+
+        function setActiveNavLink(activeLink) {
+            navLinks.forEach(link => {
+                const isActive = link === activeLink;
+                link.classList.toggle('active', isActive);
+                if (isActive) link.setAttribute('aria-current', 'location');
+                else link.removeAttribute('aria-current');
+            });
+        }
+
+        function updateActiveNavLink() {
+            const marker = window.scrollY + Math.min(window.innerHeight * 0.35, 260);
+            let currentSection = navSections[0];
+            navSections.forEach(section => {
+                if (section.offsetTop <= marker) currentSection = section;
+            });
+            const activeLink = navLinks.find(link => link.getAttribute('href') === `#${currentSection.id}`);
+            if (activeLink) setActiveNavLink(activeLink);
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink, { passive: true });
+        window.addEventListener('load', updateActiveNavLink);
+        updateActiveNavLink();
 
         // Merge curated project details with the user's current public GitHub repositories.
         async function loadProjects() {
@@ -781,35 +809,6 @@
         ));
         document.addEventListener('projects:loaded', () => {
             observeRevealElements(document.querySelectorAll('.projects-grid .project-card'));
-        });
-        // Send contact form submissions and show the result without leaving the page
-        const contactForm = document.querySelector('.contact-form');
-        const contactFormStatus = document.getElementById('contactFormStatus');
-        contactForm.addEventListener('submit', async event => {
-            event.preventDefault();
-            if (!contactForm.reportValidity()) return;
-
-            const submitButton = contactForm.querySelector('[type="submit"]');
-            submitButton.disabled = true;
-            contactFormStatus.textContent = 'Sending your message…';
-            contactFormStatus.classList.remove('is-error');
-
-            try {
-                const response = await fetch('https://formsubmit.co/ajax/himashmadushanka975@gmail.com', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                    body: JSON.stringify(Object.fromEntries(new FormData(contactForm)))
-                });
-                const result = await response.json();
-                if (!response.ok || result.success === false || result.success === 'false') throw new Error('Message could not be sent');
-                contactFormStatus.textContent = 'Thanks! Your message has been sent.';
-                contactForm.reset();
-            } catch (error) {
-                contactFormStatus.textContent = 'Message could not be sent. Please email himashmadushanka975@gmail.com directly.';
-                contactFormStatus.classList.add('is-error');
-            } finally {
-                submitButton.disabled = false;
-            }
         });
         // Certificate image lightbox
         const certificateDialog = document.querySelector('.certificate-lightbox');
