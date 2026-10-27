@@ -447,11 +447,16 @@
             <form class="contact-form" action="https://formsubmit.co/himashmadushanka975@gmail.com" method="POST">
                 <input type="hidden" name="_subject" value="New message from your portfolio">
                 <input type="hidden" name="_template" value="table">
-                <input type="text" name="name" placeholder="Full Name" autocomplete="name" required>
-                <input type="email" name="email" placeholder="Email Address" autocomplete="email" required>
-                <input type="tel" name="phone" placeholder="Mobile Number" autocomplete="tel">
-                <input type="text" name="subject" placeholder="Email Subject" required>
-                <textarea name="message" placeholder="Your Message" rows="7" required></textarea>
+                <label class="visually-hidden" for="contactName">Full Name</label>
+                <input id="contactName" type="text" name="name" placeholder="Full Name" autocomplete="name" required>
+                <label class="visually-hidden" for="contactEmail">Email Address</label>
+                <input id="contactEmail" type="email" name="email" placeholder="Email Address" autocomplete="email" required>
+                <label class="visually-hidden" for="contactPhone">Mobile Number</label>
+                <input id="contactPhone" type="tel" name="phone" placeholder="Mobile Number" autocomplete="tel">
+                <label class="visually-hidden" for="contactSubject">Email Subject</label>
+                <input id="contactSubject" type="text" name="subject" placeholder="Email Subject" required>
+                <label class="visually-hidden" for="contactMessage">Your Message</label>
+                <textarea id="contactMessage" name="message" placeholder="Your Message" rows="7" required></textarea>
                 <button class="contact-submit" type="submit">Send Message <i class="fas fa-paper-plane" aria-hidden="true"></i></button>
             </form>
             <div class="social-links">
@@ -552,7 +557,7 @@
 
             async function fetchGithubRepositories() {
                 const controller = new AbortController();
-                const timeout = setTimeout(() => controller.abort(), 1000);
+                const timeout = setTimeout(() => controller.abort(), 4000);
                 try {
                     const response = await fetch(
                         'https://api.github.com/users/HimashMadushanka/repos?per_page=100&sort=updated',
@@ -754,7 +759,12 @@
         loadProjects();
         // Theme switch, remembering the visitor's choice
         const themeToggle = document.getElementById('themeToggle');
-        const savedTheme = localStorage.getItem('portfolio-theme');
+        let savedTheme = null;
+        try {
+            savedTheme = localStorage.getItem('portfolio-theme');
+        } catch (error) {
+            // Storage may be unavailable in private browsing or restricted contexts.
+        }
         if (savedTheme === 'light') document.documentElement.dataset.theme = 'light';
 
         function updateThemeButton() {
@@ -767,8 +777,13 @@
         themeToggle.addEventListener('click', () => {
             const isLight = document.documentElement.dataset.theme !== 'light';
             document.documentElement.dataset.theme = isLight ? 'light' : 'dark';
-            localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
+            try {
+                localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
+            } catch (error) {
+                // Keep the theme switch usable even when preferences cannot be saved.
+            }
             updateThemeButton();
+            updateHeaderAppearance();
         });
 
         // Reveal content once when it enters the viewport.
@@ -917,15 +932,20 @@
 
         // Header background on scroll
         const header = document.querySelector('header');
-        window.addEventListener('scroll', () => {
+        function updateHeaderAppearance() {
+            const isLight = document.documentElement.dataset.theme === 'light';
             if (window.pageYOffset > 100) {
-                header.style.background = 'rgba(10, 14, 39, 0.95)';
-                header.style.boxShadow = '0 5px 20px rgba(0, 217, 255, 0.1)';
+                header.style.background = isLight ? 'rgba(244, 247, 251, 0.98)' : 'rgba(10, 14, 39, 0.95)';
+                header.style.boxShadow = isLight
+                    ? '0 5px 20px rgba(23, 32, 51, 0.12)'
+                    : '0 5px 20px rgba(0, 217, 255, 0.1)';
             } else {
-                header.style.background = 'rgba(10, 14, 39, 0.8)';
-                header.style.boxShadow = 'none';
+                header.style.background = isLight ? 'rgba(244, 247, 251, 0.94)' : 'rgba(10, 14, 39, 0.8)';
+                header.style.boxShadow = isLight ? '0 4px 18px rgba(23, 32, 51, 0.08)' : 'none';
             }
-        });
+        }
+        window.addEventListener('scroll', updateHeaderAppearance, { passive: true });
+        updateHeaderAppearance();
 
         // Type the hero heading without breaking its spans or line breaks.
         const heroText = document.querySelector('.hero h1');

@@ -1670,6 +1670,37 @@
             box-shadow: 0 4px 18px rgba(23, 32, 51, 0.08);
         }
 
+        html[data-theme="light"] .logo,
+        html[data-theme="light"] nav a:hover,
+        html[data-theme="light"] nav a.active,
+        html[data-theme="light"] .section-title span,
+        html[data-theme="light"] .skills-subtitle,
+        html[data-theme="light"] .experience-date,
+        html[data-theme="light"] .education-date,
+        html[data-theme="light"] .certification-provider,
+        html[data-theme="light"] .achievement-meta,
+        html[data-theme="light"] .volunteer-heading span,
+        html[data-theme="light"] .volunteer-position strong,
+        html[data-theme="light"] .project-results,
+        html[data-theme="light"] .project-chart-count,
+        html[data-theme="light"] .theme-toggle {
+            color: #006b80;
+        }
+
+        html[data-theme="light"] nav a:hover::after,
+        html[data-theme="light"] nav a.active::after {
+            background: #006b80;
+        }
+
+        html[data-theme="light"] .theme-toggle {
+            border-color: rgba(0, 107, 128, 0.45);
+            background: #ffffff;
+        }
+
+        html[data-theme="light"] .theme-toggle:hover {
+            background: rgba(0, 107, 128, 0.08);
+        }
+
         html[data-theme="light"] nav a,
         html[data-theme="light"] .hero h1,
         html[data-theme="light"] .section-title,
