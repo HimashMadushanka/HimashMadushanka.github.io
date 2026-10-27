@@ -14,3 +14,13 @@ A responsive portfolio showcasing my data science projects, skills, education, e
 ## Built with
 
 HTML, CSS, JavaScript, and JSON. The site is hosted on GitHub Pages.
+
+## Run locally
+
+Requires [Node.js](https://nodejs.org/) (no additional packages needed).
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:8000](http://localhost:8000) in your browser. Press `Ctrl+C` in the terminal to stop the server. To use a different port, set the `PORT` environment variable before starting the server.
