@@ -29,6 +29,7 @@ The website has no build step or runtime package dependencies.
 | `style.css` | Responsive layout, themes, and animations |
 | `site-content.json` | Header, section, and footer content |
 | `projects.json` | Curated project descriptions, tags, and links |
+| `.gitignore` | Excludes local secrets, credentials, and development files from Git |
 | `image/optimized/` | Optimized profile and volunteering images used by the page |
 | `image/volunteering/` | Original volunteering photos |
 | `image/achievements/` | Achievement certificate images |
@@ -50,6 +51,18 @@ The page can also discover public repositories through the GitHub API. Selected 
 
 These services require an internet connection. The portfolio itself is a static site and does not need a backend.
 
+## Secrets and `.gitignore`
+
+`.gitignore` excludes local environment files, API key files, private credentials, certificates, and local tooling. Keep real secrets out of HTML, CSS, JavaScript, and committed JSON files. If a service requires a secret API key, do not place it in this static site: anything shipped to a browser is public and needs a backend to stay private.
+
+The current GitHub repository lookup uses the public GitHub API without a token. The FormSubmit destination address is visible in the page source by design; it is not an API key. `.gitignore` only affects files Git tracks—it does not remove files that have already been committed.
+
 ## Publish
 
-The portfolio is hosted on GitHub Pages at [himashmadushanka.github.io](https://himashmadushanka.github.io/). It is a static site with no build step. The published repository root needs `index.html`, `style.css`, both JSON files, the resume PDF, and the image folders referenced by the page.
+The live site is [himashmadushanka.github.io](https://himashmadushanka.github.io/). To publish updates:
+
+1. Commit and push the site files to the `main` branch of this repository.
+2. In GitHub, open **Settings → Pages**. Under **Build and deployment**, select **Deploy from a branch**, choose `main` and `/(root)`, then save.
+3. Wait for the Pages deployment to complete and open the live site to review it.
+
+This static site has no build step. Ensure the published repository includes `index.html`, `style.css`, both JSON files, the resume PDF, and every image folder referenced by the page. `.gitignore` is not a deployment manifest; required site files must be committed to Git.

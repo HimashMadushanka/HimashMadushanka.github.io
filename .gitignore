@@ -2,10 +2,21 @@
 .env
 .env.*
 !.env.example
+!.env.*.example
 *.pem
 *.key
+*.p12
+*.pfx
+*.secret
 secrets.json
+secrets.*.json
 credentials.json
+credentials.*.json
+api-keys.json
+api_keys.json
+.npmrc
+!.npmrc.example
+.aws/
 
 # Private or local-only data (keep public site content in the project root)
 /private/
