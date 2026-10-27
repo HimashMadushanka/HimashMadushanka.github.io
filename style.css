@@ -1683,11 +1683,15 @@
         }
 
         html[data-theme="light"] .btn-secondary {
-            color: #172033;
+            background: #00d9ff;
+            color: #0a0e27;
+            border-color: #00a8c7;
         }
 
         html[data-theme="light"] .btn-secondary:hover {
+            background: #00b8d4;
             color: #0a0e27;
+            border-color: #008eaa;
         }
 
         html[data-theme="light"] .hero,
